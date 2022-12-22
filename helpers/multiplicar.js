@@ -4,11 +4,11 @@ const colors = require('colors');
 /**
  * 
  * @param {Number} base 
- * @param {Boolean} listar 
+ * @param {Boolean} show 
  * @param {Number} to 
  * @returns 
  */
-const crearArchivoTabla = async (base, listar, to) => {
+const crearArchivoTabla = async (base, show, to) => {
 
     try {
         console.log('======================'.rainbow);
@@ -21,7 +21,7 @@ const crearArchivoTabla = async (base, listar, to) => {
             salida += ` ${base} x ${index} = ${base*index}\n`;
         }
 
-        if (listar)
+        if (show)
             console.log(salida);
 
         fs.writeFileSync(`./outputs/tabla-${base}.txt`, salida);

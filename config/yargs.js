@@ -5,8 +5,8 @@ const argv = require('yargs')
             type: 'number',
             demandOption: true,
         }, 
-        'l':{
-            alias: 'listar',
+        's':{
+            alias: 'show',
             type: 'boolean',
             default: false,
             description: 'Muestra la tabla de multiplicar'
